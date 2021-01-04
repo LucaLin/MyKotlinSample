@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/card_shape"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--這裡是選單？-->
+        <TextView
+            android:layout_width="114dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:text="July 2020"
+            android:textColor="@color/txvColorHard"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+             />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Jan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Jan"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Feb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Feb"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Mar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Mar"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/date_Apr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Apr"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_May"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="May"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Jun"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Jun"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Jul"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Jul"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/date_Aug"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Aug"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/date_Sep"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Sep"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Oct"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Oct"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/date_Nov"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Nov"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/date_Dec"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/date_picker_btn_bg"
+                            android:gravity="center"
+                            android:text="Dec"
+                            android:textColor="@color/txvColorHard"
+                            android:textSize="16sp"
+                            android:clickable="true"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

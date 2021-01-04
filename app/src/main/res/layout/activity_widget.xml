@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeekBarTestActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/card_shape"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:paddingTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="12dp"
+                android:background="#FFE500"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/line"
+                android:text="將來的推薦指數"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+
+            >
+
+
+            <TextView
+                android:id="@+id/txvMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBar"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="9dp"
+                android:textSize="12sp"
+                android:textColor="#1F1F1F"
+                android:text="負面"
+
+                />
+
+            <TextView
+                android:id="@+id/txvPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seekBar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="13dp"
+                android:textSize="12sp"
+                android:textColor="#1F1F1F"
+                android:text="正面" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"
+                android:textColor="#1F1F1F"
+                android:text="1" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginBottom="0dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"
+                android:textColor="#1F1F1F"
+                android:text="10" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="59dp"
+                android:paddingStart="26dp"
+                android:paddingEnd="25dp"
+                android:max="10"
+                android:minHeight="10dp"
+                android:progressDrawable="@drawable/seekbar_custom"
+                android:thumb="@android:color/transparent"
+
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

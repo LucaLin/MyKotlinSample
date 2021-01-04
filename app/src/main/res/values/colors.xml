@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="customGray">#FcFcFc</color>
+    <color name="lineColor">#141F1F1F</color>
+    <color name="txvColor">#661F1F1F</color>
+    <color name="chartTxvColor">#787878</color>
+    <color name="txvColorMiddle">#991F1F1F</color>
+    <color name="txvColorHard">#F41F1F1F</color>
+    <color name="white_bgColor">#FFFFFF</color>
+
+    <color name="btnCancel">#FFF67A</color>
+    <color name="btnConfirm">#FFE500</color>
+
+    <color name="txvWrongColor">#F03D3D</color>
+    <color name="chartLineColor">#EB0F29</color>
+</resources>

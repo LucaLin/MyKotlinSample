@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <Button
+        android:id="@+id/btnToSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="進度條"
+        android:onClick="btnToSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/gLine_2"
+        app:layout_constraintStart_toStartOf="@+id/gLine_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="圖表"
+        android:onClick="btnToChart"
+        app:layout_constraintEnd_toStartOf="@+id/gLine_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToNumKb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="btnToNumKb"
+        android:text="數字鍵盤"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gLine_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToMonthPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnToMonthPicker"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnToNumKb"
+        app:layout_constraintStart_toStartOf="@id/gLine_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="月份pick"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gLine_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.35"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gLine_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.70"
+        android:orientation="vertical" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
