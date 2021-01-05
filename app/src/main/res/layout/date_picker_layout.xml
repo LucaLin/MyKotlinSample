@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="375dp"
         android:layout_height="416dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-<!--  head-->
+        <!--  head-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@drawable/head_round_shape_bg"
-            >
+            android:background="@drawable/head_round_shape_bg">
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,376 +32,16 @@
 
         </LinearLayout>
 
-<!--body-->
+        <!--body-->
 
-<!--        line 1-->
-        <LinearLayout
+        <GridView
+            android:id="@+id/gridView"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="200dp"
             android:background="@color/white_bgColor"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="1"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="2"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="3"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="4"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="5"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="6"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="7"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-        </LinearLayout>
-<!--line 2-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/white_bgColor"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="8"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="9"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="10"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="11"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="12"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="13"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="14"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-        </LinearLayout>
-<!--line3-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/white_bgColor"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="15"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="16"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="17"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="18"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="19"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="20"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="21"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-        </LinearLayout>
-<!--line4-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/white_bgColor"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="22"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="23"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="24"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="25"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="26"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="27"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="28"
-                android:background="@drawable/date_picker_btn_bg"
-                android:clickable="true"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"/>
-
-        </LinearLayout>
+            android:numColumns="auto_fit"
+            android:columnWidth="50dp"
+            android:stretchMode="spacingWidthUniform"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -411,25 +51,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="月底"
-                android:textSize="16sp"
-                android:textColor="@color/txvColorHard"
-                android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:text="月底"
+                android:textColor="@color/txvColorHard"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(依大小月份，29/30/31 擇一日扣款)"
-                android:textSize="16sp"
-                android:textColor="@color/txvColor"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="16dp"/>
-
+                android:layout_marginLeft="16dp"
+                android:text="(依大小月份，29/30/31 擇一日扣款)"
+                android:textColor="@color/txvColor"
+                android:textSize="16sp" />
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineColor" />
+
 
         <LinearLayout
             android:layout_width="match_parent"

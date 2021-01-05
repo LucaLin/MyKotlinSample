@@ -1,6 +1,7 @@
 package com.example.mainPackage
 
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -8,6 +9,7 @@ import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.*
 import android.widget.Button
+import android.widget.GridView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_welcome.*
@@ -29,6 +31,12 @@ class WelcomeActivity : AppCompatActivity() {
     var monthPicker: AlertDialog? = null
     var datePicker: AlertDialog? = null
 
+
+
+
+
+
+
     fun btnToChart(view:View){
         startActivity(Intent(this, ChartActivity::class.java))
     }
@@ -44,6 +52,8 @@ class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+
+
 
 
     }
@@ -196,6 +206,15 @@ class WelcomeActivity : AppCompatActivity() {
         datePicker = createDialog(datePicker)
 //        datePicker?.window?.setGravity(Gravity.CENTER)
         var datePickView = LayoutInflater.from(this).inflate(R.layout.date_picker_layout,null)
+
+        var dayList = mutableListOf<String>()
+        for(i in 1..28){
+            dayList.add(i.toString())
+        }
+        var dateGridView:GridView = datePickView.findViewById(R.id.gridView)
+        var adapter = GridDateView(this,dayList)
+        dateGridView?.adapter = adapter
+
 
         //置中
         var display = windowManager.defaultDisplay
