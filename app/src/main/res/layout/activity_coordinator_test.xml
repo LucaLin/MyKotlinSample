@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CoordinatorTestActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--appbar 設定展開全長-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:background="@color/mainbg"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+<!--Collapsing折疊長度-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingTool"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:minHeight="44dp"
+                app:collapsedTitleGravity="left"
+                app:collapsedTitleTextAppearance="@style/Toolbar.collapse_TitleText"
+                app:expandedTitleMarginStart="20dp"
+                app:expandedTitleMarginTop="52dp"
+                app:expandedTitleTextAppearance="@style/Toolbar.expanded_TitleText"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:navigationIcon="@mipmap/icon_close"
+                    app:title="是否贖回所有零錢投資標的？">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+<!--延伸的layout-->
+            <LinearLayout
+                android:id="@+id/extraToolArea"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:layout_gravity="bottom"
+                android:background="@color/mainbg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="目前所持有零錢投資之標的"
+                    android:textColor="@color/txvColorMiddle"
+                    android:textSize="14sp" />
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+                    
+                    <Button
+                        android:id="@+id/btnNow"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:onClick="btnNow"
+                        android:text="現值"
+                        android:textSize="16sp"
+                        android:textColor="@color/txvColorHard"
+                        android:background="@drawable/btn_cancel_bg"/>
+
+                    <Button
+                        android:id="@+id/btnIncome"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:onClick="btnIncome"
+                        android:text="損益"
+                        android:textSize="16sp"
+                        android:textColor="@color/txvColorMiddle"
+                        android:background="@color/lineColor"/>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+<!--layout_behavior與appBarLayout連動-->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ryTest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/chartdata_item_full" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+<!--所有行為皆在CoordinatorLayout完成-->
+
+</LinearLayout>

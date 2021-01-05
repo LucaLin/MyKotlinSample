@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+        <activity android:name=".CoordinatorTestActivity"></activity>
         <activity android:name=".TabTestActivity" />
         <activity android:name=".SeekBarTestActivity" />
         <activity android:name=".ChartActivity" />

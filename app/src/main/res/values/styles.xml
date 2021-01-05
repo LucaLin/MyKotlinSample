@@ -8,6 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Toolbar.expanded_TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/txvColorHard</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginTop">52dp</item>
+
+    </style>
+    <style name="Toolbar.collapse_TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/txvColorHard</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="CustomDialog" parent="@style/Theme.AppCompat.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>

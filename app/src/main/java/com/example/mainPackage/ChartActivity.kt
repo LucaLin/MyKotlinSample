@@ -104,7 +104,7 @@ class ChartActivity : AppCompatActivity() {
 //
     }
 
-    fun getAdapter(): MyAdapter{
+    fun getAdapter():MyAdapter{
         var list: MutableList<Data> = mutableListOf()
         for (i in 1..5) {
             list.add(Data())

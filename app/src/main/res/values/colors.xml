@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="transparent">#00000000</color>
+    <color name="mainbg">#D9D9D9</color>
 
     <color name="customGray">#FcFcFc</color>
     <color name="lineColor">#141F1F1F</color>

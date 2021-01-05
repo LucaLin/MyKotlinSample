@@ -36,6 +36,10 @@ class WelcomeActivity : AppCompatActivity() {
         startActivity(Intent(this, SeekBarTestActivity::class.java))
     }
 
+    fun btnToCoordinate(view: View){
+        startActivity(Intent(this, CoordinatorTestActivity::class.java))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
