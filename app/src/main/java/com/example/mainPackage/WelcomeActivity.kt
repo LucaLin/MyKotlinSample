@@ -27,6 +27,7 @@ class WelcomeActivity : AppCompatActivity() {
 
     var numPadDialog: AlertDialog? = null
     var monthPicker: AlertDialog? = null
+    var datePicker: AlertDialog? = null
 
     fun btnToChart(view:View){
         startActivity(Intent(this, ChartActivity::class.java))
@@ -189,6 +190,21 @@ class WelcomeActivity : AppCompatActivity() {
                 txvNumResult?.text = result
             }
         })
+    }
+
+    fun btnToDatePick(view: View){
+        datePicker = createDialog(datePicker)
+//        datePicker?.window?.setGravity(Gravity.CENTER)
+        var datePickView = LayoutInflater.from(this).inflate(R.layout.date_picker_layout,null)
+
+        //置中
+        var display = windowManager.defaultDisplay
+        var params = datePicker?.window?.attributes
+        params?.height = display.height
+        datePicker?.window?.attributes = params
+
+        datePicker?.setView(datePickView)
+        datePicker?.show()
     }
 
     fun btnToMonthPicker(view: View){
