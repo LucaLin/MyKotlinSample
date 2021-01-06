@@ -4,6 +4,7 @@
     <item android:state_pressed="true"
         android:drawable="@drawable/date_picker_selected_bg"
         />
+
     <!-- idle/normal -->
     <item android:state_pressed="false" android:drawable="@color/white_bgColor"
         />

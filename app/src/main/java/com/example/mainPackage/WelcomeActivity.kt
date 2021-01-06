@@ -10,10 +10,14 @@ import android.text.TextWatcher
 import android.view.*
 import android.widget.Button
 import android.widget.GridView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_welcome.*
+import kotlinx.android.synthetic.main.date_picker_layout.*
 import kotlinx.android.synthetic.main.num_pad_layout.*
+import kotlinx.android.synthetic.main.num_pad_layout.btn_cancel
+import org.jetbrains.anko.backgroundResource
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -204,16 +208,43 @@ class WelcomeActivity : AppCompatActivity() {
 
     fun btnToDatePick(view: View){
         datePicker = createDialog(datePicker)
-//        datePicker?.window?.setGravity(Gravity.CENTER)
         var datePickView = LayoutInflater.from(this).inflate(R.layout.date_picker_layout,null)
+        var layout_lastFewDay:LinearLayout = datePickView.findViewById(R.id.layout_lastFewDay)
+        var btn_cancel:Button = datePickView.findViewById(R.id.btn_cancel)
+        var btn_confirm:Button = datePickView.findViewById(R.id.btn_confirm)
 
-        var dayList = mutableListOf<String>()
+        var isLastFewDay_selected = false
+        var lastFewDay_pos = 30//月底的position(備用)
+
+        //map 加入點擊的boolean記錄
+        var dayList = mutableListOf<DateItem>()
         for(i in 1..28){
-            dayList.add(i.toString())
+            dayList.add(DateItem(i.toString(),false))
         }
         var dateGridView:GridView = datePickView.findViewById(R.id.gridView)
         var adapter = GridDateView(this,dayList)
         dateGridView?.adapter = adapter
+
+        //月底
+        layout_lastFewDay.setOnClickListener{
+            if(!isLastFewDay_selected){
+                isLastFewDay_selected = true
+                layout_lastFewDay.backgroundResource = R.color.btnConfirm
+            }else{
+                isLastFewDay_selected = false
+                layout_lastFewDay.backgroundResource = R.color.whiteColor
+            }
+        }
+
+        //取消
+        btn_cancel.setOnClickListener {
+            if(datePicker?.isShowing == true){
+                datePicker?.dismiss()
+            }
+        }
+
+        //確定
+        btn_confirm.setOnClickListener {  }
 
 
         //置中
@@ -231,6 +262,14 @@ class WelcomeActivity : AppCompatActivity() {
         monthPicker = createDialog(monthPicker)
         monthPicker?.window?.setGravity(Gravity.CENTER)
         var monthDatePickView = LayoutInflater.from(this).inflate(R.layout.month_picker_layout,null)
+
+        var gridMonthView:GridView = monthDatePickView.findViewById(R.id.gridView)
+
+        var monthList = arrayOf("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+        var adapter = GridMonthView(this,monthList = monthList)
+        gridMonthView?.adapter = adapter
+
+
 
         //置中
         var display = windowManager.defaultDisplay
