@@ -36,11 +36,6 @@ class WelcomeActivity : AppCompatActivity() {
     var datePicker: AlertDialog? = null
 
 
-
-
-
-
-
     fun btnToChart(view:View){
         startActivity(Intent(this, ChartActivity::class.java))
     }
@@ -123,7 +118,6 @@ class WelcomeActivity : AppCompatActivity() {
 
         //back鍵
         num_back.setOnClickListener {
-
             if (txvNumResult.text.toString().equals("0.00")) {//初始不啟動back鍵
                 return@setOnClickListener
             }
@@ -141,8 +135,6 @@ class WelcomeActivity : AppCompatActivity() {
                     num_dot.isEnabled = true
                 }
             }
-
-
         }
 
         btn_cancel.setOnClickListener { numPadDialog?.dismiss() }
@@ -202,6 +194,7 @@ class WelcomeActivity : AppCompatActivity() {
                     result = txvNumResult?.text.toString()//更新數字
                 result += num
                 txvNumResult?.text = result
+
             }
         })
     }
@@ -238,13 +231,11 @@ class WelcomeActivity : AppCompatActivity() {
 
         //取消
         btn_cancel.setOnClickListener {
-            if(datePicker?.isShowing == true){
-                datePicker?.dismiss()
-            }
+            if (datePicker?.isShowing == true) datePicker?.dismiss()
         }
 
         //確定
-        btn_confirm.setOnClickListener {  }
+        btn_confirm.setOnClickListener { if (datePicker?.isShowing == true) datePicker?.dismiss() }
 
 
         //置中
